@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NFTImageMAUIViewer", "NFTIm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NftUtility", "NftUtility\NftUtility.csproj", "{B2B2085A-B799-4DC9-A226-AE6B5D09B2B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Server", "BlazorApp1\Server\BlazorApp1.Server.csproj", "{D612A927-0AC5-46DE-B62D-EDFAAD1ED005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Server", "BlazorApp1\Server\BlazorApp1.Server.csproj", "{D612A927-0AC5-46DE-B62D-EDFAAD1ED005}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Client", "BlazorApp1\Client\BlazorApp1.Client.csproj", "{10F8FBCB-7857-4F46-8AEC-1063BD917818}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Client", "BlazorApp1\Client\BlazorApp1.Client.csproj", "{10F8FBCB-7857-4F46-8AEC-1063BD917818}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1.Shared", "BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Shared", "BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GethGUI", "GethGUI\GethGUI.csproj", "{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
