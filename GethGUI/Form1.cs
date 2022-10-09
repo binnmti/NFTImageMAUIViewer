@@ -1,15 +1,20 @@
 using GethGUI.Model;
 using Nethereum.Geth;
+using System.Reflection;
 
 namespace GethGUI
 {
     public partial class Form1 : Form
     {
-        private Web3Geth Geth { get; } = new();
+        private Web3Geth Web3Geth { get; } = new();
+        private string ExeDirectoryName { get; } = "";
+        private int ChainId { get; set; }
 
         public Form1()
         {
             InitializeComponent();
+
+            ExeDirectoryName = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location) ?? "";
         }
 
         private void CommandInputRunButton_Click(object sender, EventArgs e)
@@ -18,13 +23,13 @@ namespace GethGUI
 
         private async void EthAccountsButton_Click(object sender, EventArgs e)
         {
-            var request = await Geth.Eth.Accounts.SendRequestAsync();
+            var request = await Web3Geth.Eth.Accounts.SendRequestAsync();
             CommandOutputTextBox.Text += string.Concat(request);
         }
 
         private async void PersonalNewAccountButton_Click(object sender, EventArgs e)
         {
-            CommandOutputTextBox.Text += await Geth.Personal.NewAccount.SendRequestAsync(PasswordTextBox.Text);
+            CommandOutputTextBox.Text += await Web3Geth.Personal.NewAccount.SendRequestAsync(PasswordTextBox.Text);
         }
 
         private Genesis Genesis = new();
@@ -32,11 +37,13 @@ namespace GethGUI
 
         private void GenesisButton_Click(object sender, EventArgs e)
         {
+            GethGroupBox.Enabled = false;
             var form = new GenesisForm(Genesis);
-            if (form.ShowDialog() == DialogResult.OK)
-            {
-                GenesisFileNameTextBox.Text = Path.GetFileName(Genesis.FileName);
-            }
+            if (form.ShowDialog() != DialogResult.OK) return;
+
+            GenesisFileNameTextBox.Text = Path.GetFileName(Genesis.FileName);
+            ChainId = GenesisUtility.GetChainId(Genesis.FileName);
+            GethGroupBox.Enabled = true;
         }
 
         private void GenesisFileNameTextBox_TextChanged(object sender, EventArgs e)
@@ -46,9 +53,12 @@ namespace GethGUI
 
         private void InitButton_Click(object sender, EventArgs e)
         {
-            //geth --datadir /home/ubuntu/eth_private_net init /home/ubuntu/eth_private_net/myGenesis.json
+            CommandOutputTextBox.Text = GethExe.Run(ExeDirectoryName, $"--datadir {ExeDirectoryName} init {GenesisFileNameTextBox.Text}");
+        }
 
-            //$ geth --networkid "15" --nodiscover --datadir "/home/ubuntu/eth_private_net" console 2>> /home/ubuntu/eth_private_net/geth_err.log
+        private void StartButton_Click(object sender, EventArgs e)
+        {
+            CommandOutputTextBox.Text = GethExe.Run(ExeDirectoryName, $"--networkid {ChainId} --nodiscover --datadir {ExeDirectoryName} console");
         }
     }
 }

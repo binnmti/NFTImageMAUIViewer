@@ -39,26 +39,29 @@
             this.label2 = new System.Windows.Forms.Label();
             this.GenesisButton = new System.Windows.Forms.Button();
             this.InitButton = new System.Windows.Forms.Button();
+            this.GethGroupBox = new System.Windows.Forms.GroupBox();
+            this.StartButton = new System.Windows.Forms.Button();
+            this.GethGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // CommandInputTextBox
             // 
-            this.CommandInputTextBox.Location = new System.Drawing.Point(12, 66);
+            this.CommandInputTextBox.Location = new System.Drawing.Point(12, 35);
             this.CommandInputTextBox.Name = "CommandInputTextBox";
             this.CommandInputTextBox.Size = new System.Drawing.Size(658, 31);
             this.CommandInputTextBox.TabIndex = 0;
             // 
             // CommandOutputTextBox
             // 
-            this.CommandOutputTextBox.Location = new System.Drawing.Point(12, 261);
+            this.CommandOutputTextBox.Location = new System.Drawing.Point(8, 241);
             this.CommandOutputTextBox.Multiline = true;
             this.CommandOutputTextBox.Name = "CommandOutputTextBox";
-            this.CommandOutputTextBox.Size = new System.Drawing.Size(776, 177);
+            this.CommandOutputTextBox.Size = new System.Drawing.Size(776, 191);
             this.CommandOutputTextBox.TabIndex = 1;
             // 
             // CommandInputRunButton
             // 
-            this.CommandInputRunButton.Location = new System.Drawing.Point(676, 64);
+            this.CommandInputRunButton.Location = new System.Drawing.Point(677, 33);
             this.CommandInputRunButton.Name = "CommandInputRunButton";
             this.CommandInputRunButton.Size = new System.Drawing.Size(112, 34);
             this.CommandInputRunButton.TabIndex = 2;
@@ -68,7 +71,7 @@
             // 
             // EthAccountsButton
             // 
-            this.EthAccountsButton.Location = new System.Drawing.Point(95, 153);
+            this.EthAccountsButton.Location = new System.Drawing.Point(97, 155);
             this.EthAccountsButton.Name = "EthAccountsButton";
             this.EthAccountsButton.Size = new System.Drawing.Size(132, 34);
             this.EthAccountsButton.TabIndex = 3;
@@ -78,7 +81,7 @@
             // 
             // PersonalNewAccountButton
             // 
-            this.PersonalNewAccountButton.Location = new System.Drawing.Point(262, 189);
+            this.PersonalNewAccountButton.Location = new System.Drawing.Point(264, 191);
             this.PersonalNewAccountButton.Name = "PersonalNewAccountButton";
             this.PersonalNewAccountButton.Size = new System.Drawing.Size(203, 34);
             this.PersonalNewAccountButton.TabIndex = 4;
@@ -89,7 +92,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 158);
+            this.label1.Location = new System.Drawing.Point(14, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 5;
@@ -97,7 +100,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(95, 192);
+            this.PasswordTextBox.Location = new System.Drawing.Point(97, 194);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(161, 31);
             this.PasswordTextBox.TabIndex = 6;
@@ -132,7 +135,7 @@
             // 
             // InitButton
             // 
-            this.InitButton.Location = new System.Drawing.Point(12, 113);
+            this.InitButton.Location = new System.Drawing.Point(13, 76);
             this.InitButton.Name = "InitButton";
             this.InitButton.Size = new System.Drawing.Size(132, 34);
             this.InitButton.TabIndex = 10;
@@ -140,24 +143,48 @@
             this.InitButton.UseVisualStyleBackColor = true;
             this.InitButton.Click += new System.EventHandler(this.InitButton_Click);
             // 
+            // GethGroupBox
+            // 
+            this.GethGroupBox.Controls.Add(this.StartButton);
+            this.GethGroupBox.Controls.Add(this.InitButton);
+            this.GethGroupBox.Controls.Add(this.CommandInputTextBox);
+            this.GethGroupBox.Controls.Add(this.CommandOutputTextBox);
+            this.GethGroupBox.Controls.Add(this.CommandInputRunButton);
+            this.GethGroupBox.Controls.Add(this.EthAccountsButton);
+            this.GethGroupBox.Controls.Add(this.PersonalNewAccountButton);
+            this.GethGroupBox.Controls.Add(this.label1);
+            this.GethGroupBox.Controls.Add(this.PasswordTextBox);
+            this.GethGroupBox.Enabled = false;
+            this.GethGroupBox.Location = new System.Drawing.Point(2, 46);
+            this.GethGroupBox.Name = "GethGroupBox";
+            this.GethGroupBox.Size = new System.Drawing.Size(795, 449);
+            this.GethGroupBox.TabIndex = 11;
+            this.GethGroupBox.TabStop = false;
+            this.GethGroupBox.Text = "geth.exe";
+            // 
+            // StartButton
+            // 
+            this.StartButton.Location = new System.Drawing.Point(14, 115);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(132, 34);
+            this.StartButton.TabIndex = 11;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.InitButton);
+            this.ClientSize = new System.Drawing.Size(804, 507);
             this.Controls.Add(this.GenesisButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.GenesisFileNameTextBox);
-            this.Controls.Add(this.PasswordTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.PersonalNewAccountButton);
-            this.Controls.Add(this.EthAccountsButton);
-            this.Controls.Add(this.CommandInputRunButton);
-            this.Controls.Add(this.CommandOutputTextBox);
-            this.Controls.Add(this.CommandInputTextBox);
+            this.Controls.Add(this.GethGroupBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.GethGroupBox.ResumeLayout(false);
+            this.GethGroupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,5 +203,7 @@
         private Label label2;
         private Button GenesisButton;
         private Button InitButton;
+        private GroupBox GethGroupBox;
+        private Button StartButton;
     }
 }
