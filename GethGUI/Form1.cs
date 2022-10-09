@@ -43,5 +43,12 @@ namespace GethGUI
         {
 
         }
+
+        private void InitButton_Click(object sender, EventArgs e)
+        {
+            //geth --datadir /home/ubuntu/eth_private_net init /home/ubuntu/eth_private_net/myGenesis.json
+
+            //$ geth --networkid "15" --nodiscover --datadir "/home/ubuntu/eth_private_net" console 2>> /home/ubuntu/eth_private_net/geth_err.log
+        }
     }
 }

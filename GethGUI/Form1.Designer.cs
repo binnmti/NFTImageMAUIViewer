@@ -38,6 +38,7 @@
             this.GenesisFileNameTextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.GenesisButton = new System.Windows.Forms.Button();
+            this.InitButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // CommandInputTextBox
@@ -49,10 +50,10 @@
             // 
             // CommandOutputTextBox
             // 
-            this.CommandOutputTextBox.Location = new System.Drawing.Point(12, 179);
+            this.CommandOutputTextBox.Location = new System.Drawing.Point(12, 261);
             this.CommandOutputTextBox.Multiline = true;
             this.CommandOutputTextBox.Name = "CommandOutputTextBox";
-            this.CommandOutputTextBox.Size = new System.Drawing.Size(776, 259);
+            this.CommandOutputTextBox.Size = new System.Drawing.Size(776, 177);
             this.CommandOutputTextBox.TabIndex = 1;
             // 
             // CommandInputRunButton
@@ -67,7 +68,7 @@
             // 
             // EthAccountsButton
             // 
-            this.EthAccountsButton.Location = new System.Drawing.Point(97, 103);
+            this.EthAccountsButton.Location = new System.Drawing.Point(95, 153);
             this.EthAccountsButton.Name = "EthAccountsButton";
             this.EthAccountsButton.Size = new System.Drawing.Size(132, 34);
             this.EthAccountsButton.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             // PersonalNewAccountButton
             // 
-            this.PersonalNewAccountButton.Location = new System.Drawing.Point(264, 139);
+            this.PersonalNewAccountButton.Location = new System.Drawing.Point(262, 189);
             this.PersonalNewAccountButton.Name = "PersonalNewAccountButton";
             this.PersonalNewAccountButton.Size = new System.Drawing.Size(203, 34);
             this.PersonalNewAccountButton.TabIndex = 4;
@@ -88,7 +89,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 108);
+            this.label1.Location = new System.Drawing.Point(12, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(77, 25);
             this.label1.TabIndex = 5;
@@ -96,7 +97,7 @@
             // 
             // PasswordTextBox
             // 
-            this.PasswordTextBox.Location = new System.Drawing.Point(97, 142);
+            this.PasswordTextBox.Location = new System.Drawing.Point(95, 192);
             this.PasswordTextBox.Name = "PasswordTextBox";
             this.PasswordTextBox.Size = new System.Drawing.Size(161, 31);
             this.PasswordTextBox.TabIndex = 6;
@@ -129,11 +130,22 @@
             this.GenesisButton.UseVisualStyleBackColor = true;
             this.GenesisButton.Click += new System.EventHandler(this.GenesisButton_Click);
             // 
+            // InitButton
+            // 
+            this.InitButton.Location = new System.Drawing.Point(12, 113);
+            this.InitButton.Name = "InitButton";
+            this.InitButton.Size = new System.Drawing.Size(132, 34);
+            this.InitButton.TabIndex = 10;
+            this.InitButton.Text = "Init";
+            this.InitButton.UseVisualStyleBackColor = true;
+            this.InitButton.Click += new System.EventHandler(this.InitButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.InitButton);
             this.Controls.Add(this.GenesisButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.GenesisFileNameTextBox);
@@ -163,5 +175,6 @@
         private TextBox GenesisFileNameTextBox;
         private Label label2;
         private Button GenesisButton;
+        private Button InitButton;
     }
 }
