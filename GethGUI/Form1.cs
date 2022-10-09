@@ -1,3 +1,4 @@
+using GethGUI.Model;
 using Nethereum.Geth;
 
 namespace GethGUI
@@ -24,6 +25,23 @@ namespace GethGUI
         private async void PersonalNewAccountButton_Click(object sender, EventArgs e)
         {
             CommandOutputTextBox.Text += await Geth.Personal.NewAccount.SendRequestAsync(PasswordTextBox.Text);
+        }
+
+        private Genesis Genesis = new();
+
+
+        private void GenesisButton_Click(object sender, EventArgs e)
+        {
+            var form = new GenesisForm(Genesis);
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                GenesisFileNameTextBox.Text = Path.GetFileName(Genesis.FileName);
+            }
+        }
+
+        private void GenesisFileNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
