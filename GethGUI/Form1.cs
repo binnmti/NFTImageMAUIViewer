@@ -10,11 +10,14 @@ namespace GethGUI
         private string ExeDirectoryName { get; } = "";
         private int ChainId { get; set; }
 
+        private readonly Genesis Genesis = new();
+
         public Form1()
         {
             InitializeComponent();
 
             ExeDirectoryName = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location) ?? "";
+            Settings.
         }
 
         private void CommandInputRunButton_Click(object sender, EventArgs e)
@@ -31,9 +34,6 @@ namespace GethGUI
         {
             CommandOutputTextBox.Text += await Web3Geth.Personal.NewAccount.SendRequestAsync(PasswordTextBox.Text);
         }
-
-        private Genesis Genesis = new();
-
 
         private void GenesisButton_Click(object sender, EventArgs e)
         {
