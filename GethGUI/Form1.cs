@@ -17,7 +17,6 @@ namespace GethGUI
             InitializeComponent();
 
             ExeDirectoryName = Path.GetDirectoryName(Assembly.GetEntryAssembly()?.Location) ?? "";
-            Settings.
         }
 
         private void CommandInputRunButton_Click(object sender, EventArgs e)
