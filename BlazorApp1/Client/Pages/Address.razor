@@ -43,7 +43,7 @@
 
     private async Task OnSearch()
     {
-        var addressItems = await Http.GetFromJsonAsync<AddressItems>($"Address?address={AddressId}") ?? default;
-        EtherBalance = addressItems.EtherBalance;
+        var addressItem = await Http.GetFromJsonAsync<AddressItem>($"Address?address={AddressId}") ?? default;
+        EtherBalance = addressItem.EtherBalance;
     }
 }

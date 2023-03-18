@@ -1,3 +1,7 @@
-﻿namespace BlazorApp1.Shared;
+﻿using Nethereum.Hex.HexTypes;
 
-public record AddressItems(decimal EtherBalance, decimal EtherValue);
+namespace BlazorApp1.Shared;
+
+public record AddressItem(decimal EtherBalance, decimal EtherValue, List<TransactionItem> TransactionItems);
+
+public record TransactionItem(string Hash, HexBigInteger Block, string From, string To, HexBigInteger Value, HexBigInteger Gas);
