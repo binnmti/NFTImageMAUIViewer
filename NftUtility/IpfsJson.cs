@@ -1,4 +1,4 @@
-﻿namespace NftUtility;
+﻿namespace Web3Utility;
 
 public class IpfsJson
 {

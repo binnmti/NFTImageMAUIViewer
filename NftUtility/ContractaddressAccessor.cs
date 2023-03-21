@@ -2,7 +2,7 @@
 using System.Numerics;
 using System.Text.Json;
 
-namespace NftUtility;
+namespace Web3Utility;
 
 public static class ContractaddressAccessor
 {

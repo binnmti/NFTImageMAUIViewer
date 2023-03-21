@@ -1,7 +1,6 @@
 using BlazorApp1.Shared;
 using Microsoft.AspNetCore.Mvc;
-using NftUtility;
-using System.Numerics;
+using Web3Utility;
 
 namespace BlazorApp1.Server.Controllers;
 

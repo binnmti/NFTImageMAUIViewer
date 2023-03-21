@@ -54,7 +54,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\NftUtility\NftUtility.csproj" />
+	  <ProjectReference Include="..\NftUtility\Web3Utility.csproj" />
 	</ItemGroup>
 
 </Project>

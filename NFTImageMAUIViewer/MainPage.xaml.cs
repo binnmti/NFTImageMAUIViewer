@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
-using NftUtility;
+using Web3Utility;
 
 namespace NFTImageMAUIViewer
 {
