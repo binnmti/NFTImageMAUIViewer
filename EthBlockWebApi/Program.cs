@@ -1,4 +1,9 @@
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using EthBlockWebApi.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<EthBlockWebApiContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("EthBlockWebApiContext") ?? throw new InvalidOperationException("Connection string 'EthBlockWebApiContext' not found.")));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

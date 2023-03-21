@@ -1,0 +1,161 @@
+﻿@model IEnumerable<BlazorApp1.Shared.Block>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SealFields)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nonce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sha3Uncles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LogsBloom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionsRoot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StateRoot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReceiptsRoot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Miner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Difficulty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalDifficulty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MixHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExtraData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Size)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasLimit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasUsed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Timestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uncles)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseFeePerGas)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SealFields)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParentHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nonce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sha3Uncles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LogsBloom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionsRoot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StateRoot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReceiptsRoot)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Miner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Difficulty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalDifficulty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MixHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExtraData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Size)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasLimit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasUsed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uncles)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BaseFeePerGas)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.BlockId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.BlockId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.BlockId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

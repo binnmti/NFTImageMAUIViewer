@@ -1,0 +1,139 @@
+﻿@model BlazorApp1.Shared.Block
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Block</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BlockId" />
+            <div class="form-group">
+                <label asp-for="Number" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlockHash" class="control-label"></label>
+                <input asp-for="BlockHash" class="form-control" />
+                <span asp-validation-for="BlockHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Author" class="control-label"></label>
+                <input asp-for="Author" class="form-control" />
+                <span asp-validation-for="Author" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SealFields" class="control-label"></label>
+                <input asp-for="SealFields" class="form-control" />
+                <span asp-validation-for="SealFields" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ParentHash" class="control-label"></label>
+                <input asp-for="ParentHash" class="form-control" />
+                <span asp-validation-for="ParentHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nonce" class="control-label"></label>
+                <input asp-for="Nonce" class="form-control" />
+                <span asp-validation-for="Nonce" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sha3Uncles" class="control-label"></label>
+                <input asp-for="Sha3Uncles" class="form-control" />
+                <span asp-validation-for="Sha3Uncles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LogsBloom" class="control-label"></label>
+                <input asp-for="LogsBloom" class="form-control" />
+                <span asp-validation-for="LogsBloom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionsRoot" class="control-label"></label>
+                <input asp-for="TransactionsRoot" class="form-control" />
+                <span asp-validation-for="TransactionsRoot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StateRoot" class="control-label"></label>
+                <input asp-for="StateRoot" class="form-control" />
+                <span asp-validation-for="StateRoot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReceiptsRoot" class="control-label"></label>
+                <input asp-for="ReceiptsRoot" class="form-control" />
+                <span asp-validation-for="ReceiptsRoot" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Miner" class="control-label"></label>
+                <input asp-for="Miner" class="form-control" />
+                <span asp-validation-for="Miner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Difficulty" class="control-label"></label>
+                <input asp-for="Difficulty" class="form-control" />
+                <span asp-validation-for="Difficulty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalDifficulty" class="control-label"></label>
+                <input asp-for="TotalDifficulty" class="form-control" />
+                <span asp-validation-for="TotalDifficulty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MixHash" class="control-label"></label>
+                <input asp-for="MixHash" class="form-control" />
+                <span asp-validation-for="MixHash" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ExtraData" class="control-label"></label>
+                <input asp-for="ExtraData" class="form-control" />
+                <span asp-validation-for="ExtraData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Size" class="control-label"></label>
+                <input asp-for="Size" class="form-control" />
+                <span asp-validation-for="Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GasLimit" class="control-label"></label>
+                <input asp-for="GasLimit" class="form-control" />
+                <span asp-validation-for="GasLimit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GasUsed" class="control-label"></label>
+                <input asp-for="GasUsed" class="form-control" />
+                <span asp-validation-for="GasUsed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Timestamp" class="control-label"></label>
+                <input asp-for="Timestamp" class="form-control" />
+                <span asp-validation-for="Timestamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Uncles" class="control-label"></label>
+                <input asp-for="Uncles" class="form-control" />
+                <span asp-validation-for="Uncles" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BaseFeePerGas" class="control-label"></label>
+                <input asp-for="BaseFeePerGas" class="form-control" />
+                <span asp-validation-for="BaseFeePerGas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

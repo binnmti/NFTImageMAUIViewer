@@ -1,0 +1,131 @@
+﻿@model IEnumerable<BlazorApp1.Shared.Transaction>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionIndex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockHash)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlockNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GasPrice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxFeePerGas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaxPriorityFeePerGas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Input)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nonce)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.R)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.S)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.V)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionIndex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockHash)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlockNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.To)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GasPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxFeePerGas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaxPriorityFeePerGas)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Input)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nonce)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.R)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.S)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.V)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TransactionId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TransactionId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TransactionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

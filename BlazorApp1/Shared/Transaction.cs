@@ -1,15 +1,7 @@
-﻿using Nethereum.Hex.HexTypes;
-using Nethereum.RPC.Eth.DTOs;
-using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BlazorApp1.Shared;
+﻿namespace BlazorApp1.Shared;
 public class Transaction
 {
+    public int TransactionId { get; set; }
     public string TransactionHash { get; set; }
 
     public string TransactionIndex { get; set; }
@@ -44,5 +36,5 @@ public class Transaction
 
     public string V { get; set; }
 
-    public List<AccessList> AccessList { get; set; }
+    //public List<AccessList> AccessList { get; set; }
 }
