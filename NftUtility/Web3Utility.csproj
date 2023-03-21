@@ -7,7 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nethereum.Web3" Version="4.8.0" />
+    <PackageReference Include="Dapper" Version="2.0.123" />
+    <PackageReference Include="Nethereum.Web3" Version="4.14.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorApp1\Shared\BlazorApp1.Shared.csproj" />
   </ItemGroup>
 
 </Project>
