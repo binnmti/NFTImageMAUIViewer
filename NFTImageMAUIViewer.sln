@@ -13,11 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Client", "Blazor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1.Shared", "BlazorApp1\Shared\BlazorApp1.Shared.csproj", "{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GethGUI", "GethGUI\GethGUI.csproj", "{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobsEthLog", "WebJobsEthLog\WebJobsEthLog.csproj", "{11088FFF-64FF-4392-9C58-7B62D0F58FB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebJobsEthLog", "WebJobsEthLog\WebJobsEthLog.csproj", "{11088FFF-64FF-4392-9C58-7B62D0F58FB0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EthBlockWebApi", "EthBlockWebApi\EthBlockWebApi.csproj", "{81234427-F5E3-45BF-AF01-F633216B32ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EthBlockWebApi", "EthBlockWebApi\EthBlockWebApi.csproj", "{81234427-F5E3-45BF-AF01-F633216B32ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +45,6 @@ Global
 		{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A16F6B67-5CE2-4D5A-9CBA-8F9AE995C1D5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9C8FA0B-D802-4DAF-8F8D-B88E7705295B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11088FFF-64FF-4392-9C58-7B62D0F58FB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{11088FFF-64FF-4392-9C58-7B62D0F58FB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11088FFF-64FF-4392-9C58-7B62D0F58FB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
