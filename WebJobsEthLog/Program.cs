@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Nethereum.Signer;
+using NftUtility;
 using System.Text;
 
 namespace WebJobsEthLog;
@@ -16,20 +18,27 @@ class Program
         if (isDevelopment) builder.AddUserSecrets<Program>();
         Configuration = builder.Build();
 
-        var connectionString = Configuration["ScrapingConnectionString"];
+        var infuraApiKey = Configuration["Settings:InfuraApiKey"];
+        var connectionString = Configuration["ConnectionString"];
+        await WriteSqlBlockchain.WriteBlock(infuraApiKey, connectionString);
+
+        // geth --datadir ./ console 2>> ./e01.log &
+        var gethProcess = new GethProcess("");
+        gethProcess.OnOutputDataReceived += (data) =>
+        {
+
+        };
+
+
+        var log = gethProcess.Start($"--datadir .\\ console 2>> geth_err.log");
+        Console.WriteLine(log); 
+        gethProcess.Writer("");
+        //eth.blockNumber
+        //eth.getBlock(0)   
+
+        //eth.getBlockTransactionCount(BlockNumber)
+
+
     }
 }
-
-//var builder = new HostBuilder();
-//builder.ConfigureWebJobs(b =>
-//{
-//    b.AddAzureStorageCoreServices();
-//});
-
-//var host = builder.Build();
-//using (host)
-//{
-//    await host.RunAsync();
-//}
-
 
