@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebJobsEthLog", "WebJobsEth
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EthBlockWebApi", "EthBlockWebApi\EthBlockWebApi.csproj", "{81234427-F5E3-45BF-AF01-F633216B32ED}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GethForWinGUI", "GethGUI\GethForWinGUI\GethForWinGUI.csproj", "{1F9B4E1D-7361-49A4-95D4-51543F85234B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{81234427-F5E3-45BF-AF01-F633216B32ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81234427-F5E3-45BF-AF01-F633216B32ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81234427-F5E3-45BF-AF01-F633216B32ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F9B4E1D-7361-49A4-95D4-51543F85234B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F9B4E1D-7361-49A4-95D4-51543F85234B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F9B4E1D-7361-49A4-95D4-51543F85234B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F9B4E1D-7361-49A4-95D4-51543F85234B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

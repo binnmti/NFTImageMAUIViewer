@@ -1,0 +1,3 @@
+[submodule "GethGUI"]
+	path = GethGUI
+	url = https://github.com/binnmti/GethGUI
