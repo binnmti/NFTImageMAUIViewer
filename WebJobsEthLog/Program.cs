@@ -1,6 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Nethereum.Signer;
-using NftUtility;
 using System.Text;
 
 namespace WebJobsEthLog;
@@ -20,19 +18,22 @@ class Program
 
         var infuraApiKey = Configuration["Settings:InfuraApiKey"];
         var connectionString = Configuration["ConnectionString"];
-        await WriteSqlBlockchain.WriteBlock(infuraApiKey, connectionString);
 
-        // geth --datadir ./ console 2>> ./e01.log &
-        var gethProcess = new GethProcess("");
-        gethProcess.OnOutputDataReceived += (data) =>
-        {
+        await CoinAccessor.GetPrices(connectionString);
 
-        };
+        //await WriteSqlBlockchain.WriteBlock(infuraApiKey, connectionString);
+
+        //// geth --datadir ./ console 2>> ./e01.log &
+        //var gethProcess = new GethProcess("");
+        //gethProcess.OnOutputDataReceived += (data) =>
+        //{
+
+        //};
 
 
-        var log = gethProcess.Start($"--datadir .\\ console 2>> geth_err.log");
-        Console.WriteLine(log); 
-        gethProcess.Writer("");
+        //var log = gethProcess.Start($"--datadir .\\ console 2>> geth_err.log");
+        //Console.WriteLine(log); 
+        //gethProcess.Writer("");
         //eth.blockNumber
         //eth.getBlock(0)   
 
